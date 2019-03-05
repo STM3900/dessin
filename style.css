@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: white;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #6aabe9;
+    padding: 0.1px;
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+   
+  }
+  
+  article{
+    text-align: justify;
+  }
+
+  article p{
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+  }
+
+  article h1{
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+  }
+
+  article img{
+      height: 100%;
+  }
+
+  .groupe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .titre{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  
+  /* Container for flexboxes */
+  .ligne {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .colonne {
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .colonne img{
+    height: 300px;
+    border-radius: 10px;
+    transition: border-radius 0.5s;
+  }
+
+  .colonne img:hover{
+    border-radius: 30px;
+    transition: border-radius 0.5s;
+  }
+
+  #bouton{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6aabe9;
+    border: solid 2px #6aabe9;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    padding: 15px 10px 15px 10px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 25px;
+    margin-bottom: 75px;
+    
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  #bouton:hover{
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+  }
+
+  #feed{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  #tweet{
+    width: 35%;
+    height: 1075px;
+    overflow: auto;
+    margin-bottom: 60px;
+  }
+
+ 
+  .imagegroupe{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    flex-wrap: wrap-reverse;
+    margin-top: 50px;
+  }
+
+  .imageelement{
+      
+    /*border: 1px solid #a9c2da;
+    background-color: #a9c2da;*/
+    overflow-wrap: break-word;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .imageelement img{
+    border-radius: 10px;
+    opacity: 0.7;
+    height: 500px;
+    transition: border-radius 0.5s, opacity 0.5s;
+  }
+
+
+  .imageelement img:hover{
+    border-radius: 40px;
+    opacity: 1;
+    transition: border-radius 0.5s, opacity 0.5s;
+  }
+
+  .imageelement p{
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    text-align: justify;
+  }
+  
+
+  #oeuvre{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+
+  #image{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  #element{
+    width: 33%;
+  }
+
+  #element img{
+      max-width: 100%;
+      height: auto;
+  }
+
+  #gauche{
+    margin-left: 100px;
+  }
+
+  #fleche{
+    width: 80px;
+    transition: opacity 0.5s;
+    opacity: 0.5;
+  }
+
+  #fleche:hover{
+    opacity: 0.9;
+    transition: opacity 0.5s;
+  }
+ 
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    width: 150px;
+    background-color: #3973a8;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -70px;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    animation-name: cache;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    opacity: 0.95;
+    transition: opacity 0.5s;
+  }
+  /* Style the footer */
+  footer {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #6aabe9;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  footer a{
+    color: white;
+  }
+
+  footer a:hover{
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 800px) {
+    .ligne {
+      flex-direction: column;
+    }
+
+    .groupe{
+      flex-direction: column-reverse;
+    }
+
+    #feed{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    #tweet{
+      display: flex;
+     
+      width: auto;
+
+
+      display: flex;
+
+     /* width: 70%;
+      height: 500px;*/
+      overflow: auto;
+      /*
+      margin-bottom: 60px;
+      margin-right: 15%;
+      margin-right: 15%;*/
+    }
+
+    #bouton{
+      margin-left: 30%;
+      margin-right: 30%; 
+    }
+    
+    #gauche{
+      margin-left: 0px;
+      text-align: center;
+    }
+
+    #fleche{
+      display: none;
+    }
+
+    #element{
+      width: 90%;
+    }
+
+    .imagegroupe{
+      flex-direction: column-reverse;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: hidden;
+    }
+
+    .imageelement img{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 90%;
+    height: auto;
+    }
+
+    #insta{
+      display: flex;
+      margin-right: 20px;
+      margin-left: 20px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #bouton{
+      margin-left: 20%;
+      margin-right: 20%; 
+    }
+  }  
+
+  @media (max-width: 400px) {
+    #bouton{
+      margin-left: 10%;
+      margin-right: 10%; 
+    }
+  } 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: #4980b4;
+    border-radius: 10px;
+  }
+
+  @keyframes rainbow {
+    0% {
+      color: white;
+    }
+    12% {
+      color: rgb(50, 75, 185);
+    }
+    25% {
+      color: rgb(64, 192, 64);
+    }
+    37% {
+      color: rgb(241, 241, 64);
+    }
+    50% {
+      color: rgb(209, 42, 42);
+    }
+    62% {
+      color: rgb(241, 241, 64);
+    }
+    75% {
+      color: rgb(64, 192, 64);
+    }
+    87% {
+      color: rgb(50, 75, 185);
+    }
+  }
+
+  @keyframes cache {
+   0%{opacity: 0;}
+   100%{opacity: 0;}
+  }
