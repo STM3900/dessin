@@ -32,7 +32,7 @@ if ($numero_oeuvre < 1) {
 ?>
 <body>
     <header>
-        <p><i>Les Conneries de Lasr</i></p>
+        <p><i>Les Dessins de Lasr</i></p>
     </header>
     <section class="groupe">
         <article class="element" id="gauche">
