@@ -46,7 +46,7 @@ if ($numero_oeuvre < 1) {
         </article>
     </section> 
     <footer>
-        <p>Fait avec ❤ par <a href="https://cc-c-t-o.000webhostapp.com/">Théo</a> !</p>
+        <p>Fait avec ❤ par <a href="https://www.theomigeat.com/">Théo</a> !</p>
     </footer>
 </body>
     <head>
