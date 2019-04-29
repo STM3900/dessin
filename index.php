@@ -37,8 +37,8 @@ if ($numero_oeuvre < 1) {
     <section class="groupe">
         <article class="element" id="gauche">
             <h1>Prout.</h1>
-            <p>Hewwo je suis Lasr ! <br> J'suis une française aux lunettes bien rouges owo <br> Mon anniv c'est le 8 Février, je viens d'avoir 20 ans ! <br>
-            J'suis une artiste qui dessine du traditionnel, du digital et qui fait de l'animation blblbl <br>Ah j'ai aussi créée SearchTale lol</p>
+            <p>Bonjour je suis Lasr ! <br> J'suis une française aux lunettes bien rouges !<br> Mon anniv c'est le 8 Février et j'viens d'avoir 20 ans ! <br>
+            J'suis une artiste qui dessine du traditionnel, du digital et qui fait de l'animation !</p>
         </article>
         <article class="element">
                 <img src="images/lasr.jpg" alt="">
